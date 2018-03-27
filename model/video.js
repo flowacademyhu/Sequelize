@@ -1,5 +1,5 @@
 module.exports = (sequelize, Datatype) => {
-  var Video = sequelize.define('Videos', {
+  var video = sequelize.define('Videos', {
     url: {
       type: Datatype.STRING
     },
@@ -16,5 +16,5 @@ module.exports = (sequelize, Datatype) => {
     }
   });
 
-  return Video;
+  return video;
 };
