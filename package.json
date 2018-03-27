@@ -1,0 +1,24 @@
+{
+  "name": "facebook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flowacademyhu/Sequelize.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flowacademyhu/Sequelize/issues"
+  },
+  "homepage": "https://github.com/flowacademyhu/Sequelize#readme",
+  "dependencies": {
+    "mysql2": "^1.5.3",
+    "sequelize": "^4.37.4",
+    "sequelize-import": "^1.2.1"
+  }
+}
