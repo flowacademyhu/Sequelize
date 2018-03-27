@@ -4,6 +4,7 @@ const sImport = require('sequelize-import');
 const sequelize = new Sequelize('facebook', 'root', 'toor', {
   host: '192.168.5.10',
   dialect: 'mysql',
+  logging: false,
   define: {
     timestamps: false // true by default -> no need for createdAt and updatedAt columns in the table
   }

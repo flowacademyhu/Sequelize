@@ -6,14 +6,20 @@ Without sequelize-import:
 - posts.findAll();
 */
 
-/*
-  models.user.findAll().then(users => {
+models.user.findAll().then(users => {
   users.forEach(user => {
-    console.log(user.name);
+    models.post.findAll({where: {user_id: user.id}}).then(posts => {
+      if (posts.length > 0) {
+        console.log(user.name);
+      }
+      posts.forEach(post => {
+        console.log('-' + post.content);
+      });
+    });
   });
 });
-*/
 
+/*
 models.userLanguage.findAll().then(userlanguages => {
   userlanguages.forEach(userlanguage => {
     console.log(userlanguage.level);
@@ -31,3 +37,5 @@ models.userPhoto.findAll().then(userphotos => {
     console.log(userphoto.description);
   });
 });
+*/
+

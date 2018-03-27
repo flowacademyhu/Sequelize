@@ -11,12 +11,10 @@ module.exports = function (sequelize, DataTypes) {
     }
   });
 
-  /* FOREIGN KEY ATTEMPT... FAILED
   userLanguage.associate = (models) => {
     userLanguage.belongsTo(models.language, {foreignKey: 'language_id'});
     userLanguage.belongsTo(models.user, {foreignKey: 'user_id'});
   };
-  */
 
   return userLanguage;
 };
