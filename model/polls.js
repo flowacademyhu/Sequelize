@@ -1,8 +1,8 @@
 module.exports = (sequelize, Datatype) => {
-  var Poll = sequelize.define('Polls', {
+  var poll = sequelize.define('Polls', {
     question: {
       type: Datatype.STRING
     }
   });
-  return Poll;
+  return poll;
 };
