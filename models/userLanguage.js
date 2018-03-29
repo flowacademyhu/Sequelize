@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  let userLanguage = sequelize.define('UserLanguage', {
+  let UserLanguages = sequelize.define('UserLanguage', {
     user_id: {
       type: DataTypes.INTEGER
     },
@@ -11,10 +11,10 @@ module.exports = function (sequelize, DataTypes) {
     }
   });
 
-  userLanguage.associate = (models) => {
-    userLanguage.belongsTo(models.language, {foreignKey: 'language_id'});
-    userLanguage.belongsTo(models.user, {foreignKey: 'user_id'});
+  UserLanguages.associate = (models) => {
+    UserLanguages.belongsTo(models.language, {foreignKey: 'language_id'});
+    UserLanguages.belongsTo(models.user, {foreignKey: 'user_id'});
   };
 
-  return userLanguage;
+  return UserLanguages;
 };

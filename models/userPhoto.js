@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  let userPhoto = sequelize.define('UserPhoto', {
+  let UserPhotos = sequelize.define('UserPhoto', {
     user_id: {
       type: DataTypes.INTEGER
     },
@@ -7,5 +7,5 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING
     }
   });
-  return userPhoto;
+  return UserPhotos;
 };

@@ -1,5 +1,5 @@
 module.exports = (sequelize, Datatypes) => {
-  let user = sequelize.define('User', {
+  let Users = sequelize.define('User', {
     name: {
       type: Datatypes.STRING
     },
@@ -28,9 +28,9 @@ module.exports = (sequelize, Datatypes) => {
       type: Datatypes.INTEGER
     }
   });
-  user.associate = (models) => {
-    user.hasMany(models.userLanguage, {foreignKey: 'user_id'});
-    user.hasMany(models.groupMember, {foreignKey: 'user_id'});
+  Users.associate = (models) => {
+    Users.hasMany(models.userLanguage, {foreignKey: 'user_id'});
+    Users.hasMany(models.groupMember, {foreignKey: 'user_id'});
   };
-  return user;
+  return Users;
 };

@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataType) => {
-  var GroupMember = sequelize.define('GroupMembers', {
+  var GroupMember = sequelize.define('GroupMember', {
 
     user_id: {
       type: DataType.INTEGER

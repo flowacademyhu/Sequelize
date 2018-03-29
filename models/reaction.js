@@ -1,5 +1,5 @@
 module.exports = (sequelize, Datatype) => {
-  var Reactions = sequelize.define('Reactions', {
+  var Reactions = sequelize.define('Reaction', {
     id: {
       type: Datatype.INTEGER,
       primaryKey: true

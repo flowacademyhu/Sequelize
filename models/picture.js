@@ -1,5 +1,5 @@
 module.exports = (sequelize, Datatype) => {
-  var picture = sequelize.define('Pictures', {
+  var Picture = sequelize.define('Picture', {
     format: {
       type: Datatype.ENUM('png', 'jpg', 'bmp', 'gif', 'svg')
     },
@@ -7,5 +7,5 @@ module.exports = (sequelize, Datatype) => {
       type: Datatype.STRING
     }
   });
-  return picture;
+  return Picture;
 };

@@ -1,5 +1,5 @@
 module.exports = (sequelize, Datatypes) => {
-  let userSchool = sequelize.define('User', {
+  let UserSchools = sequelize.define('UserSchool', {
     user_id: {
       type: Datatypes.INTEGER
     },
@@ -16,5 +16,5 @@ module.exports = (sequelize, Datatypes) => {
       type: Datatypes.STRING
     }
   });
-  return userSchool;
+  return UserSchools;
 };

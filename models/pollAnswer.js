@@ -1,5 +1,5 @@
 module.exports = (sequelize, Datatype) => {
-  var pollAnswer = sequelize.define('PollAnswers', {
+  var PollAnswer = sequelize.define('PollAnswer', {
     poll_id: {
       type: Datatype.INTEGER
     },
@@ -7,5 +7,5 @@ module.exports = (sequelize, Datatype) => {
       type: Datatype.STRING
     }
   });
-  return pollAnswer;
+  return PollAnswer;
 };

@@ -1,5 +1,5 @@
 module.exports = (sequelize, Datatypes) => {
-  let userWorkplace = sequelize.define('User', {
+  let UserWorkplaces = sequelize.define('UserWorkplace', {
     user_id: {
       type: Datatypes.INTEGER
     },
@@ -16,5 +16,5 @@ module.exports = (sequelize, Datatypes) => {
       type: Datatypes.STRING
     }
   });
-  return userWorkplace;
+  return UserWorkplaces;
 };

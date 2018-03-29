@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  let school = sequelize.define('School', {
+  let Schools = sequelize.define('School', {
     name: {
       type: DataTypes.STRING
     },
@@ -7,5 +7,5 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING
     }
   });
-  return school;
+  return Schools;
 };

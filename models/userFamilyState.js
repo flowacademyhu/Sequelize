@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  let userFamilyState = sequelize.define('UserFamilyState', {
+  let UserFamilyStates = sequelize.define('UserFamilyState', {
     relation_id: {
       type: DataTypes.INTEGER
     },
@@ -10,5 +10,5 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.INTEGER
     }
   });
-  return userFamilyState;
+  return UserFamilyStates;
 };

@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  let userLoginHistory = sequelize.define('UserLoginHistory', {
+  let UserLoginHistories = sequelize.define('UserLoginHistory', {
     user_id: {
       type: DataTypes.INTEGER
     },
@@ -10,5 +10,5 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.DATE
     }
   });
-  return userLoginHistory;
+  return UserLoginHistories;
 };

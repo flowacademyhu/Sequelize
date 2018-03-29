@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataType) => {
-  var GroupRole = sequelize.define('GroupRoles', {
+  var GroupRole = sequelize.define('GroupRole', {
 
     role_name: {
       type: DataType.STRING
