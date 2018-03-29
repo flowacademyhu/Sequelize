@@ -29,6 +29,7 @@ module.exports = (sequelize, Datatypes) => {
     }
   });
   user.associate = (models) => {
+    user.hasMany(models.userLanguage, {foreignKey: 'user_id'});
     user.hasMany(models.groupMember, {foreignKey: 'user_id'});
   };
   return user;

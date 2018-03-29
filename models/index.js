@@ -1,4 +1,4 @@
-// set connection
+// Estabilish connection
 const Sequelize = require('sequelize');
 const sImport = require('sequelize-import');
 const sequelize = new Sequelize('facebook', 'root', 'toor', {
@@ -10,7 +10,14 @@ const sequelize = new Sequelize('facebook', 'root', 'toor', {
   }
 });
 
-// test connection
+/*
+Without sequelize-import:
+- const postsModel = require('model'); pl. 'userlanguages'
+- let posts = postsModel(sequelize);
+- posts.findAll();
+*/
+
+// Test connection
 sequelize
   .authenticate()
   .then(() => {
@@ -20,4 +27,14 @@ sequelize
     console.error('Unable to connect to the database:', err);
   });
 
-module.exports = sImport(__dirname, sequelize, {exclude: ['index.js']});
+const models = sImport(__dirname, sequelize, {
+  exclude: ['index.js']
+});
+
+// megnézi az összes modell asszociációját
+Object.keys(models).forEach(model => {
+  if (model.associate) {
+    model.associate();
+  }
+});
+module.exports = models;
