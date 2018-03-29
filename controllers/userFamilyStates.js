@@ -1,7 +1,6 @@
 const express = require('express');
 const userFamilyStates = express();
 const models = require('../models');
-
 // index
 userFamilyStates.get('/', (req, res) => {
   models.userFamilyState.findAll().then(userFamilyStates => {

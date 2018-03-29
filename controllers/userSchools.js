@@ -1,7 +1,6 @@
 const express = require('express');
 const userSchools = express();
 const models = require('../models');
-
 // index
 userSchools.get('/', (req, res) => {
   models.userSchool.findAll().then(userSchools => {
